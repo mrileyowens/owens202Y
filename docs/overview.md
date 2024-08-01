@@ -14,4 +14,6 @@ Outside these folders are the `.ipynb` Jupyter notebooks used to create the figu
 
 ### `esc.ipynb`
 
-This notebook is responsible for calculating the LyC escape fractions. 
+This notebook is responsible for calculating the LyC escape fractions and tabulating the measurements.
+
+The primary function of the notebook is `measure()`, which is the function that actually measures the LyC escape fractions of the MagE slit apertures.
