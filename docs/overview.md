@@ -20,6 +20,12 @@ This notebook is responsible for calculating the LyC escape fractions and tabula
 
 The primary function of the notebook is `measure()`, which is the function that actually measures the LyC escape fractions of the MagE slit apertures.
 
+### `galfit.ipynb`
+
+This notebook creates a multi-panel figure showing the results of using GALFIT to remove a foreground, interloping galaxy covering part of the Sunburst Arc.
+
+The notebook fetches the cutouts of the interloper-removed images created by Alex Navarre, and then creates source masks of the two filters. For each cutout, the notebook creates a smaller cutout centered on the interloping galaxy and plots the new cutout in a panel of the figure, adding coordinate boundaries, ticks, and tick labels to the panel. The notebook also adjusts the aspect ratio of the panel to be square and labels the filter and GALFIT output type (i.e., the original image, model, or residual) of the image in the panel. Finally, the notebook adds labels and ticks to the figure before saving it as `foreground_galaxy_galfit_modeling_results.pdf` in the `figs/` folder.
+
 ### `map.ipynb`
 
 This notebook creates the primary on-sky map figure of the article, showing the Sunburst Arc and its cluster field, the MagE slit apertures, and zoom-in insets on the two largest arcs (those targeted by the MagE observations) with labeled clump numbers.
