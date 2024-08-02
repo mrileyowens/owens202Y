@@ -26,6 +26,12 @@ This notebook creates a multi-panel figure showing the results of using GALFIT t
 
 The notebook fetches the cutouts of the interloper-removed images created by Alex Navarre, and then creates source masks of the two filters. For each cutout, the notebook creates a smaller cutout centered on the interloping galaxy and plots the new cutout in a panel of the figure, adding coordinate boundaries, ticks, and tick labels to the panel. The notebook also adjusts the aspect ratio of the panel to be square and labels the filter and GALFIT output type (i.e., the original image, model, or residual) of the image in the panel. Finally, the notebook adds labels and ticks to the figure before saving it as `foreground_galaxy_galfit_modeling_results.pdf` in the `figs/` folder.
 
+### `lya_and_lyc_maps.ipynb`
+
+### `lya_nb_m3.ipynb`
+
+### `lya.ipynb`
+
 ### `map.ipynb`
 
 This notebook creates the primary on-sky map figure of the article, showing the Sunburst Arc and its cluster field, the MagE slit apertures, and zoom-in insets on the two largest arcs (those targeted by the MagE observations) with labeled clump numbers.
@@ -40,8 +46,14 @@ The notebook's sole function is `make()`, which starts by fetching the WCS of on
 
 The notebook then moves on to producing the aforementioned mask of the two largest arcs of the Sunburst Arc. It first retrieves the precursor mask, originally made by our collaboration to apply to observations of the Sunburst Arc with the Very Large Telescope's Multi Unit Spectroscopic Explorer. The notebook then reprojects the precursor mask to the common WCS of the HST images, and converts it to binary values (the precursor mask does not have binary values, and the reprojection's interpolation would cause non-binary values anyways). The notebook creates a new FITS header from the common WCS of the HST images and inserts several relevant keywords before saving it as `arc_mask_v5.fits` in `results/masks/`.
 
+### `nb.ipynb`
+
+### `seeing.ipynb`
+
 ### `source_plane.ipynb()`
 
 The `source_plane.ipynb()` notebook makes a 4-panel figure showing the source plane reconstruction of the Sunburst Arc&mdash;based on the lens model of [Sharon et al. (2022)](https://doi.org/10.3847/1538-4357/ac927a) (ApJ, 941, 203)&mdash;with 1 of the 4 non-LyC-leaking MagE slit apertures overlaid on each panel. The notebook takes the base `.png` images created by Keren Sharon, trims them to be square, centered on the relevant portion of the image, plots them onto the corresponding panels, labels each panel by the ID of the MagE slit aperture ray traced onto the source plane reconstruction in the panel, and removes any ticks or tick labels from the panels before saving the figure as `source_plane_nonleaker_apertures.pdf` in `figs/`.
+
+### `stack.ipynb`
 
 </div>
