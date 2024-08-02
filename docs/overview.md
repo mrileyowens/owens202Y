@@ -2,7 +2,11 @@
 
 This file details the structure of this repository and the nature of its files.
 
-## Data
+## Overview
+
+### ...
+
+### Data
 
 The software of this repository uses data from two primary sources: the Magellan Echellette (MagE) spectrograph mounted on ... 
 
@@ -27,6 +31,10 @@ This notebook creates a multi-panel figure showing the results of using GALFIT t
 The notebook fetches the cutouts of the interloper-removed images created by Alex Navarre, and then creates source masks of the two filters. For each cutout, the notebook creates a smaller cutout centered on the interloping galaxy and plots the new cutout in a panel of the figure, adding coordinate boundaries, ticks, and tick labels to the panel. The notebook also adjusts the aspect ratio of the panel to be square and labels the filter and GALFIT output type (i.e., the original image, model, or residual) of the image in the panel. Finally, the notebook adds labels and ticks to the figure before saving it as `foreground_galaxy_galfit_modeling_results.pdf` in the `figs/` folder.
 
 ### `lya_and_lyc_maps.ipynb`
+
+This notebook plots the Lyα and LyC maps of the two largest arcs of the Sunburst Arc in a multi-panel figure.
+
+In the `plot()` function the notebook fetches the common WCS of the HST images and creates two rotated WCSs, such that either arc appears horizontal. Then, for each map to plot, the function gets the image, reprojects it to the rotated WCSs, and plots the rotated image in the corresponding panel. It continues by setting the coordinate limits of the panels and disabling their ticks and labels. The remaining code adds labels indicating the arcs the panels show and the type of map, as well as compasses, scalebars, the footprints of the MagE slit apertures, and labels of the images of source plane clumps. The notebook saves the final figure as `lya_and_lyc_maps.pdf` in the `figs/` folder.
 
 ### `lya_nb_m3.ipynb`
 
