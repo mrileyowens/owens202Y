@@ -20,9 +20,13 @@ Outside these folders are the `.ipynb` Jupyter notebooks used to create the figu
 
 ### `esc.ipynb`
 
+<!--
+
 This notebook is responsible for calculating the LyC escape fractions and tabulating the measurements.
 
 The primary function of the notebook is `measure()`, which is the function that actually measures the LyC escape fractions of the MagE slit apertures.
+
+-->
 
 ### `galfit.ipynb`
 
@@ -38,19 +42,37 @@ Because of difficulties encountered while trying to assign the multi-subplot fig
 
 ### `lya_and_lyc_maps.ipynb`
 
+<!--
+
 This notebook plots the Lyα and LyC maps of the two largest arcs of the Sunburst Arc in a multi-panel figure.
 
 In the `plot()` function the notebook fetches the common WCS of the HST images and creates two rotated WCSs, such that either arc appears horizontal. Then, for each map to plot, the function gets the image, reprojects it to the rotated WCSs, and plots the rotated image in the corresponding panel. It continues by setting the coordinate limits of the panels and disabling their ticks and labels. The remaining code adds labels indicating the arcs the panels show and the type of map, as well as compasses, scalebars, the footprints of the MagE slit apertures, and labels of the images of source plane clumps. The notebook saves the final figure as `lya_and_lyc_maps.pdf` in the `figs/` folder.
 
+-->
+
 ### `lya_nb_m3.ipynb`
+
+This notebook creates a multi-panel figure of the narrowband Lyα maps of the main image in the footprint of the MagE slit aperture M3, dubbed 'Godzilla' in the literature.
+
+Because the two Lyα map schemes are highly discrepant about the Lyα properties of Godzilla, it is important to show the two maps at the location of Godzilla at various statistical significances, which is the purpose of the notebook's sole function `plot()`. The function opens by fetching the `.fits` files of the two Lyα map schemes (with F390W and F555W as the local continuum estimates), and defines the celestial coordinate center of the cutout area to plot in each panel as an Astropy `SkyCoord` object, as well as the width of the square cutout area (slightly wider than the coordinate boundaries set later). After instantiating the matplotlib `Figure` and `Axes` object of the figure, `plot()` explicitly sets the `hspace` and `wspace` of the subplots to 0 to make the panels contiguous.
+
+In the following loop, for the Lyα map of each continuum estimate, the notebook fetches the `HDUList` of the map's `.fits` file and creates a `Cutout2D` object for both the fluxes and uncertainties of the image using the WCS of the map, previous `SkyCoord` object, and the set width of the cutout. A nested loop for a variety of statistical deviations (e.g., +1σ, -2σ, etc.) then plots the cutouts at those statistical deviations in the appropriate panels. In each panel, the nested loop also draws, in pixel coordinates, (1) a manually placed ellipse around Godzilla and the two nearby, smaller clumps, and (2) the footprint of slit M3's aperture, with its pixel coordinates manually calculated. 
+
+Because it is difficult to apply a WCS projection to plots created from `plt.subplots()`, the nested loop also manually calculates the coordinate limits of the panels so that each is 2″ on a side, since each pixel in the drizzled images is 0.03″ across. Following this, `plot()` adds inward-facing ticks to all the plots, and only adds tick labels when the labels would not be between plots, calculating the coordinates of the ticks in similar fashion as the coordinate limits. The nested loop concludes by setting the aspect ratio of each panel to ensure they appear square, and adding labels indicating the statistical deviation of the panel and the continuum estimate method.
+
+`plot()` concludes by adding coordinate labels to the figure and saving the figure to `figs/` as `lya_nb_m3.pdf`.
 
 ### `lya.ipynb`
 
 ### `map.ipynb`
 
+<!--
+
 This notebook creates the primary on-sky map figure of the article, showing the Sunburst Arc and its cluster field, the MagE slit apertures, and zoom-in insets on the two largest arcs (those targeted by the MagE observations) with labeled clump numbers.
 
 The notebook's primary function `plot()` starts by instantiating a figure with the common WCS of the HST images and plots the HST/WFC3 F606W image of the Sunburst Arc and cluster field. It then sets the coordinate boundaries and labels of the figure. To create the zoom-in inset axes, the notebook first defines the position of the inset axes in the main axes coordinate system, creates new WCSs by rotating the main image's WCS using `rotate_wcs()` so that the two largest arcs appear either horizontal or vertical, depending on the set of inset axes they appear in, adds the inset axes to the main panel with the rotated WCSs with `add_inset_axes()`, plots the accordingly rotated main image in the inset axes, and trims the inset axes coordinate limits to focus on the arcs using `set_inset_axes_limits()`. The notebook then disables the ticks and labels of the inset axes. The notebook executes `add_box()` several times to add footprints of the displayed area in the inset axes on the main image, as well as highlight the other arc segments of the Sunburst Arc. For each of these boxes in the main image and the corresponding inset axes, the notebook labels them according to the terminology of the lens model of [Sharon et al. (2022)](https://doi.org/10.3847/1538-4357/ac927a) (ApJ, 941, 203). For each of the MagE slit apertures, the notebook then instantiates the aperture as a regions `RectangleSkyRegion()` object, converts it to a pixel-based representation given the WCS of each panel the aperture appears in, and then plots and labels the footprint. For each image of a source plane clump that appears in the inset axes, `plot()` circles (or boxes, for one image) and labels the clump. Following this, `plot()` concludes by annotating the main axes with a compass, adds scalebars to the main and inset axes, and finally saves the figure as `sunburst_arc_and_cluster_field.pdf` to the `figs` folder.
+
+-->
 
 ### `masks.ipynb`
 
