@@ -122,6 +122,10 @@ To interpret the different non-LyC-leaking Lyα profiles of the MagE slit apertu
 
 ### `stack.ipynb`
 
-The `stack.ipynb` notebook creates stacked spectra of the MagE slit apertures targeting the LyC-leaking region and the non-LyC-leaking region. 
+The `stack.ipynb` notebook creates stacked spectra of the MagE slit apertures targeting the LyC-leaking region and the non-LyC-leaking region, which has general utility to compare the bulk Lyα properties between the LyC-leaking region and the non-LyC-leaking regions.
+
+The core function of `stack.ipynb`, `stack()`, opens with a `for` loop iterating through the files of each MagE spectrum. An `if` block determines if the spectrum is one of the spectra to stack (slits M0 and M3 are undesirable for stacking because slit M0 has a very poor fluxing and slit M3 targets a highly magnified object probably not representative of the non-LyC-leaking regions it is embedded in), and if so, which stack to add the spectrum to (either the stack of the LyC-leaking region or non-LyC-leaking regions). Either way, if eligible for stacking, the `if` block will retrieve the spectrum, place it in the rest frame, normalize it, interpolate it to a set of common wavelength bins used for the stacked spectrum, and then add its flux densities to the stacked spectrum and add its associated uncertainties in quadrature. 
+
+After exiting the `for` loop, the notebook closes by normalizing each stacked spectrum by the number of individual spectra in the stack, and then saves the two stacked spectra as `sunburst_arc_leaker_stack_mage.txt` and `sunburst_arc_nonleaker_stack_mage.txt` in `data/`.
 
 </div>
