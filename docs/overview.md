@@ -22,9 +22,11 @@ Outside these folders are the `.ipynb` Jupyter notebooks used to create the figu
 
 <!--
 
-This notebook is responsible for calculating the LyC escape fractions and tabulating the measurements.
+This notebook is responsible for calculating the LyC escape fractions and associated photometry and tabulating the measurements.
 
-The primary function of the notebook is `measure()`, which is the function that actually measures the LyC escape fractions of the MagE slit apertures.
+The primary function of the notebook is `measure()`, which is the function that actually measures the LyC escape fractions of the MagE slit apertures, and the secondary function `tabulate()` constructs a LaTeX-formatted table as a `.txt` from the LyC escape fraction measurements and measured photometries. `measure()` starts by retrieving the data of special copies of the HST/WFC3 F275W and HST/ACS F814W images of the Sunburst Arc, trimmed to just cover the two largest arcs (where the MagE slit apertures lie), and GALFITed to remove a foreground galaxy partially covering one of the apertures. Using the `Background2D` object of photutils, the notebook models the background of both images, subtracting the fitted background from the images and converting them into units of flux densities.
+
+Next, `measure()` uses stsynphot to retrieve the filter transmission curves of the F275W and F814W curves, ...
 
 -->
 
@@ -42,13 +44,9 @@ Because of difficulties encountered while trying to assign the multi-subplot fig
 
 ### `lya_and_lyc_maps.ipynb`
 
-<!--
-
 This notebook plots the Lyα and LyC maps of the two largest arcs of the Sunburst Arc in a multi-panel figure.
 
-In the `plot()` function the notebook fetches the common WCS of the HST images and creates two rotated WCSs, such that either arc appears horizontal. Then, for each map to plot, the function gets the image, reprojects it to the rotated WCSs, and plots the rotated image in the corresponding panel. It continues by setting the coordinate limits of the panels and disabling their ticks and labels. The remaining code adds labels indicating the arcs the panels show and the type of map, as well as compasses, scalebars, the footprints of the MagE slit apertures, and labels of the images of source plane clumps. The notebook saves the final figure as `lya_and_lyc_maps.pdf` in the `figs/` folder.
-
--->
+In the `plot()` function, the notebook fetches the common WCS of the HST images and creates two rotated WCSs using `rotate_wcs()`, such that either arc appears horizontal when plotted. Then, for each map to plot, the function gets the image, reprojects it to the rotated WCSs, and plots the rotated image in the corresponding panel. It continues by setting the coordinate limits of the panels and disabling their ticks and labels. The remaining code adds labels indicating the arcs the panels show and the type of map, as well as compasses, scalebars, the footprints of the MagE slit apertures, and labels of the images of source plane clumps. The notebook saves the final figure as `lya_and_lyc_maps.pdf` in the `figs/` folder.
 
 ### `lya_nb_m3.ipynb`
 
