@@ -7,5 +7,6 @@
 - [ ] Create a `requirements.txt` file listing the package versions the project uses
 - [ ] Confirm that all uses of the stacked spectra use the correct and current version produced by `stack.ipynb`
 - [ ] Add the descriptions of `nb.ipynb` and `seeing.ipynb` once the results of `seeing.ipynb` are satisfactory
+- [ ] Update the convolution in `esc.ipynb` to also include the effect of airmass
 
 ### Closed
