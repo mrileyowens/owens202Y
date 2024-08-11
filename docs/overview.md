@@ -26,7 +26,9 @@ This notebook is responsible for calculating the LyC escape fractions and associ
 
 The primary function of the notebook is `measure()`, which is the function that actually measures the LyC escape fractions of the MagE slit apertures, and the secondary function `tabulate()` constructs a LaTeX-formatted table as a `.txt` from the LyC escape fraction measurements and measured photometries. `measure()` starts by retrieving the data of special copies of the HST/WFC3 F275W and HST/ACS F814W images of the Sunburst Arc, trimmed to just cover the two largest arcs (where the MagE slit apertures lie), and GALFITed to remove a foreground galaxy partially covering one of the apertures. Using the `Background2D` object of photutils, the notebook models the background of both images, subtracting the fitted background from the images and converting them into units of flux densities.
 
-Next, `measure()` uses stsynphot to retrieve the filter transmission curves of the F275W and F814W curves, ...
+Next, `measure()` uses stsynphot to retrieve the filter transmission curves of the F275W and F814W curves, integrating them to determine the total throughput, which will be necessary in the final calculation of the LyC escape fractions. Following this, the notebook prepares the mask of the arcs by reprojecting it and interpolating it to the smaller footprint of the trimmed filter cutouts. 
+
+`measure()` then opens a `for` loop that iterates over each MagE slit aperture. For each slit, the loop reprojects and interpolates the slit mask created in `masks.ipynb` to the smaller footprint of the filter cutouts. It then estimates the uncertainties of the two filter cutouts as the standard deviation inside the slit mask but outside the arc mask. Using the ...
 
 -->
 
