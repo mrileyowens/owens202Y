@@ -10,3 +10,5 @@
 - [ ] Update the convolution in `esc.ipynb` to also include the effect of airmass
 
 ### Closed
+
+- [x] Update all files to use the current naming scheme of the MagE spectra (closed by #10)
