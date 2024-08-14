@@ -1,5 +1,6 @@
 ### Open
 
+- [ ] Update flow chart to reflect that the `galfit.ipynb` output also feeds into the final article
 - [ ] Add all Python packages and verisons to the software credit in the article
 - [ ] Determine the units of the Lyα maps and verify the units stated in the documentation and code comments 
 - [ ] Update the article's methodology with new details about the MC simulation process
