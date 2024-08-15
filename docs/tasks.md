@@ -1,5 +1,6 @@
 ### Open
 
+- [ ] Round the Pearson correlation coefficients annotated in the panels of the corner plot produced by `lya.ipynb` to the approriate number of significant figures
 - [ ] Update flow chart to reflect that the `galfit.ipynb` output also feeds into the final article
 - [ ] Add all Python packages and verisons to the software credit in the article
 - [ ] Determine the units of the Lyα maps and verify the units stated in the documentation and code comments 
