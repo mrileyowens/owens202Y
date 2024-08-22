@@ -5,7 +5,6 @@
 - [ ] Add the calculated limiting magnitude to the article
 - [ ] Add description of `limit.ipynb` to `overview.md`
 - [ ] Consider whether it is more appropriate to report fluxes (rather than flux densities) in the seeing simulation
-- [ ] Add horizontal, separating lines to tables where applicable to separate the stacked and individual spectra
 - [ ] Update flow chart to reflect that the `galfit.ipynb` output also feeds into the final article
 - [ ] Add all Python packages and verisons to the software credit in the article
 - [ ] Determine the units of the Lyα maps and verify the units stated in the documentation and code comments 
@@ -14,6 +13,7 @@
 
 ### Closed
 
+- [x] Consider how to determine the number of significant figures to report for the depth of the F275W image (closed 22 August 2024)
 - [x] Optimize the convolutions in `esc.ipynb` and `seeing.ipynb` so that they only calculate the effect of the convolution on the pixels summed for photometric measurements (closed 20 August 2024 by #15)
 - [x] Create a virtual environment with the latest Python and package versions and execute the project's code with the environment (closed 15 August 2024 by #14)
 - [x] Create a `requirements.txt` file listing the package versions the project uses (closed 15 August 2024 by #14)
