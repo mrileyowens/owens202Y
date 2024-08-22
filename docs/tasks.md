@@ -1,6 +1,9 @@
 ### Open
 
-- [ ] Add license information to the repository
+- [ ] Add `limit.ipynb` to the flow chart
+- [ ] Double check all file headers and code comments for accuracy and consistency
+- [ ] Add the calculated limiting magnitude to the article
+- [ ] Add description of `limit.ipynb` to `overview.md`
 - [ ] Consider whether it is more appropriate to report fluxes (rather than flux densities) in the seeing simulation
 - [ ] Add horizontal, separating lines to tables where applicable to separate the stacked and individual spectra
 - [ ] Update flow chart to reflect that the `galfit.ipynb` output also feeds into the final article
