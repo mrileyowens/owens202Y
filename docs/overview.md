@@ -20,17 +20,16 @@ Outside these folders are the `.ipynb` Jupyter notebooks used to create the figu
 
 ### `esc.ipynb`
 
-<!--
-
 This notebook is responsible for calculating the LyC escape fractions and associated photometry and tabulating the measurements.
 
 The primary function of the notebook is `measure()`, which is the function that actually measures the LyC escape fractions of the MagE slit apertures, and the secondary function `tabulate()` constructs a LaTeX-formatted table as a `.txt` from the LyC escape fraction measurements and measured photometries. `measure()` starts by retrieving the data of special copies of the HST/WFC3 F275W and HST/ACS F814W images of the Sunburst Arc, trimmed to just cover the two largest arcs (where the MagE slit apertures lie), and GALFITed to remove a foreground galaxy partially covering one of the apertures. Using the `Background2D` object of photutils, the notebook models the background of both images, subtracting the fitted background from the images and converting them into units of flux densities.
 
 Next, `measure()` uses stsynphot to retrieve the filter transmission curves of the F275W and F814W curves, integrating them to determine the total throughput, which will be necessary in the final calculation of the LyC escape fractions. Following this, the notebook prepares the mask of the arcs by reprojecting it and interpolating it to the smaller footprint of the trimmed filter cutouts. 
 
-`measure()` then opens a `for` loop that iterates over each MagE slit aperture. For each slit, the loop reprojects and interpolates the slit mask created in `masks.ipynb` to the smaller footprint of the filter cutouts. It then estimates the uncertainties of the two filter cutouts as the standard deviation inside the slit mask but outside the arc mask. Using the ...
+`measure()` then opens a `for` loop that iterates over each MagE slit aperture. For each slit, the loop reprojects and interpolates the slit mask created in `masks.ipynb` to the smaller footprint of the filter cutouts. It then estimates the uncertainties of the two filter cutouts as the standard deviation inside the slit mask but outside the arc mask. Using a 2-dimensional Gaussian kernel with width matching the airmass-adjusted seeing conditions of the given slit aperture, the loop convolves the two filters and their uncertainties. `measure()` then computes the total flux in each filter in each aperture and calculates the corresponding uncertainties.
 
--->
+The notebook then fetches the associated Starburst99 stellar continuum fit of the aperture's spectrum, which it uses as an estimate of the shape of the Lyman continuum. For each filter, the slit ID loop transmits the Starburst99 fit through the transmission curves of the filter and integrates the resulting spectrum. Two `for` loops calculate the uncertainties of the integrated, transmitted Starburst99 flux densities for each filter. Using a rearranged form of equation S3 in [Rivera-Thorsen et al. (2019) (Science, 366, 738)](https://doi.org/10.1126/science.aaw0978), the notebook calculates the LyC escape fraction with the previously calculated quantities, saving the LyC escape fraction and filter fluxes in an output file named like `f_esc_lyc_measurements.txt` in `results/`.
+
 
 ### `galfit.ipynb`
 
