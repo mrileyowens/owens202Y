@@ -1,5 +1,6 @@
 ### Open
 
+- [ ] Investigate if the first `for` loop in `make()` of `nb.ipynb` is necessary
 - [ ] Clean up all files by removing obsolete code and adding more and any missing comments
 - [ ] Double check all file headers and code comments for accuracy and consistency
 - [ ] Add all Python packages and verisons to the software credit in the article
