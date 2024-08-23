@@ -2,7 +2,7 @@
 
 - [ ] Perform a final execution of the project validating its integrity
 - [ ] Investigate if the first `for` loop in `make()` of `nb.ipynb` is necessary
-- [ ] Clean up all files by removing obsolete code and adding more and any missing comments
+- [ ] Clean up all files by removing obsolete code and adding more and any missing comments (partially closed 23 August 2024 by #21)
 - [ ] Double check all file headers and code comments for accuracy and consistency
 - [ ] Add all Python packages and verisons to the software credit in the article
 - [ ] Determine the units of the Lyα maps and verify the units stated in the documentation and code comments 
