@@ -1,7 +1,7 @@
 ### Open
 
+- [ ] Clean up all files by removing obsolete code and adding more and any missing comments
 - [ ] Double check all file headers and code comments for accuracy and consistency
-- [ ] Consider whether it is more appropriate to report fluxes (rather than flux densities) in the seeing simulation
 - [ ] Add all Python packages and verisons to the software credit in the article
 - [ ] Determine the units of the Lyα maps and verify the units stated in the documentation and code comments 
 - [ ] Update the article's methodology with new details about the MC simulation process
@@ -9,6 +9,7 @@
 
 ### Closed
 
+- [x] Consider whether it is more appropriate to report fluxes (rather than flux densities) in the seeing simulation (closed 22 August 2024)
 - [x] Add description of `limit.ipynb` to `overview.md` (closed 22 August 2024 by #19)
 - [x] Update flow chart to reflect that the `galfit.ipynb` output also feeds into the final article (closed 22 August 2024 by #18)
 - [x] Add `limit.ipynb` to the flow chart (closed 22 August 2024 by #18)
