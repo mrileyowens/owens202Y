@@ -129,6 +129,14 @@ The notebook then moves on to producing the aforementioned mask of the two large
 
 ### `seeing.ipynb`
 
+The `seeing.ipynb` notebook estimates the effect of atmospheric diffusion on the total Lyα flux in each aperture. Although it doesn't share any new information about the change in *shape* of a Lyα profile due to atmospheric diffusion, it can offer some insight about how much nearby Lyα emission can impact the profile observed in the MagE spectra. 
+
+The notebook has two high-level functions: `func()`, which performs the convolution of the images and measures the Lyα flux densities in each aperture and in each Lyα map scheme before and after convolution, and `tabulate()`, which arranges the results into a LaTeX-formatted table. 
+
+...
+
+`tabulate()` starts by defining the header of the table, and then fetching the Lyα flux density measurements from `seeing_simulation_measurements_results.txt`. The function then starts a `for` loop, iterating over the slit aperture IDs. For the set of Lyα measurements for the slit ID, the loop rounds all the measurements to an appropriate number of significant figures with `round_to_uncertainties()` and formats them as a row in the table. After concluding the loop, `tabulate()` adds the footer to the table and saves the table as `seeing_simulation_measurements_table.txt` in `results/`.
+
 ### `source_plane.ipynb()`
 
 The `source_plane.ipynb()` notebook makes a 4-panel figure showing the source plane reconstruction of the Sunburst Arc&mdash;based on the lens model of [Sharon et al. (2022)](https://doi.org/10.3847/1538-4357/ac927a) (ApJ, 941, 203)&mdash;with 1 of the 4 non-LyC-leaking MagE slit apertures overlaid on each panel. 
