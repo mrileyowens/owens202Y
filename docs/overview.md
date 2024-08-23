@@ -127,6 +127,16 @@ The notebook then moves on to producing the aforementioned mask of the two large
 
 ### `nb.ipynb`
 
+The `nb.ipynb` notebook is actually a complete conversion of an older notebook, `Sunburst_NB_continuum_subtraction_v2.ipynb`, written by Jane R. Rigby to create the original continuum-subtracted narrowband Lyα maps from the HST/WFC3 F410M filter. M. Riley Owens completely converted the notebook to (1) eliminate significant amounts of code that were exploratory or not necessary for this project, (2) make the notebook's structure more consistent with the project's other notebooks, and (3) simplify the notebook so that it could execute with a single function call. That function call is `make()`.
+
+`make()` opens by retrieving SED fits made by Gourav Khullar to complete images of the Sunburst Arc, calculating the mean flux density between 1 and 1.05 µm to determine a normalizing factor to scale each SED by. Next, the function scales each SED by its corresponding scale factor to eliminate any differences in the flux density scaling of each SED due to differential magnification of the complete galaxy images, as well as dereddens the flux densities by accounting for foreground Milky Way dust extinction.
+
+In addition to the SEDs, the notebook also uses the stacked MagE spectra created by `stack.ipynb` as an estimate of the underlying continuum. To prepare the spectra, the notebook convolves segments of feature-free continuum in the spectra with a boxcar kernel, replacing the Lyα profile in the original spectrum with the matching portion of the boxcar-convolved continuum.
+
+Next, for each spectrum (the SEDs and the stacked MagE spectra), a loop calculates the count rate as would be observed for the spectrum through the HST/WFC3 F410M, F390W, and F555W filters, computing the ratio between the count rate of F410M and the other two filters as a scaling factor.
+
+Before creating the continuum-subtracted Lyα maps, `make()` creates a mask of an empty region on the sky that it will use to measure background statistics. It then opens a loop iterating over each off-band filter (F390W and F555W), fetching the on- and off-band data, computing the median of the background region in each image, and subtracting the median from each image. Using the mean of the previously computed scaling factors, the loop rescales the off-band image and subtracts the rescaled off-band image from the on-band F410M image. Afterward, the code computes the propagated uncertainty in the final continuum-subtracted image, creates a WCS object for the output files, and saves the output continuum-subtracted Lyα maps as `Lya_cont_sub_{the off-band filter}.fits` in `results/lya_maps/`.
+
 ### `seeing.ipynb`
 
 The `seeing.ipynb` notebook estimates the effect of atmospheric diffusion on the total Lyα flux in each aperture. Although it doesn't share any new information about the change in *shape* of a Lyα profile due to atmospheric diffusion, it can offer some insight about how much nearby Lyα emission can impact the profile observed in the MagE spectra. The notebook has two high-level functions: `func()`, which performs the convolution of the images and measures the Lyα flux densities in each aperture and in each Lyα map scheme before and after convolution, and `tabulate()`, which arranges the results into a LaTeX-formatted table. 
