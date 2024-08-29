@@ -1,0 +1,46 @@
+\begin{deluxetable*}{r|lll|lll}
+
+\tablecaption{Simulated aperture flux changes due to atmospheric seeing \label{tab:seeing_simulation}}
+
+\tablehead{
+	\colhead{Slit} & 
+	\colhead{} &
+	\colhead{F390W} &
+	\colhead{} &
+	\colhead{} &
+	\colhead{F555W} & 
+	\colhead{}
+	\\
+	\colhead{} &
+	\colhead{Unconvolved} &
+	\colhead{Convolved} &
+	\colhead{Ratio} & 
+	\colhead{Unconvolved} &
+	\colhead{Convolved} &
+	\colhead{Ratio}
+	\\
+	\colhead{} &
+	\colhead{[$e^-$ s$^{-1}$]} &
+	\colhead{[$e^-$ s$^{-1}$]} &
+	\colhead{} &
+	\colhead{[$e^-$ s$^{-1}$]} &
+	\colhead{[$e^-$ s$^{-1}$]} &
+	\colhead{}
+}
+
+\startdata
+M5 & $0.82\pm0.03$ & $0.863\pm0.002$ & $1.05\pm0.03$ & $-0.15\pm0.04$ & $-0.212\pm0.004$ & $1.4\pm0.4$ \\
+M4 & $1.34\pm0.03$ & $1.420\pm0.004$ & $1.06\pm0.02$ & $0.04\pm0.04$ & $0.349\pm0.006$ & $10\pm10$ \\
+M6 & $1.66\pm0.03$ & $1.796\pm0.003$ & $1.08\pm0.02$ & $0.49\pm0.04$ & $0.814\pm0.005$ & $1.6\pm0.1$ \\
+M3 & $1.51\pm0.04$ & $1.608\pm0.005$ & $1.06\pm0.03$ & $-0.24\pm0.08$ & $0.25\pm0.01$ & $-1.0\pm0.4$ \\
+\hline
+M0 & $5.90\pm0.06$ & $4.401\pm0.004$ & $0.746\pm0.008$ & $3.6\pm0.1$ & $2.810\pm0.008$ & $0.78\pm0.03$ \\
+M2 & $6.63\pm0.07$ & $5.099\pm0.009$ & $0.769\pm0.008$ & $5.2\pm0.1$ & $4.00\pm0.01$ & $0.77\pm0.02$ \\
+M7 & $3.22\pm0.04$ & $2.497\pm0.005$ & $0.776\pm0.009$ & $2.18\pm0.07$ & $1.70\pm0.01$ & $0.78\pm0.02$ \\
+M8 & $2.49\pm0.02$ & $2.214\pm0.003$ & $0.889\pm0.009$ & $1.98\pm0.04$ & $1.787\pm0.006$ & $0.90\pm0.02$ \\
+M9 & $3.02\pm0.03$ & $2.430\pm0.005$ & $0.804\pm0.009$ & $2.27\pm0.06$ & $1.462\pm0.009$ & $0.64\pm0.02$
+\enddata
+
+\tablecomments{From left to right: slit, flux inside the slit of the unconvolved and simulated seeing-convolved F390W-based Ly$\alpha$ map, the ratio between the two fluxes, and likewise for the F555W-based Ly$\alpha$ map. Ratios $>$ 1 indicate the flux in the aperture increased after the convolution, and ratios $<$ 1 indicate the flux in the aperture decreased after the convolution. The convolution used a 2-dimensional Gaussian kernel of the combined effect of the time-weighted seeing conditions and airmasses (\S\,\ref{sssec:disc_lya_seeing}).}
+
+\end{deluxetable*}
