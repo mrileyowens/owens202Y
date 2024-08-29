@@ -1,6 +1,5 @@
 ### Open
 
-- [ ] Perform a final execution of the project validating its integrity
 - [ ] Clean up all files by removing obsolete code and adding more and any missing comments (partially closed 23 August 2024 by #21)
 - [ ] Double check all file headers and code comments for accuracy and consistency
 - [ ] Add all Python packages and verisons to the software credit in the article
@@ -8,6 +7,7 @@
 
 ### Closed
 
+- [x] Perform a final execution of the project validating its integrity (closed 28 August 2024)
 - [x] Update the article's methodology with new details about the MC simulation process (closed 28 August 2024)
 - [x] Investigate if the first `for` loop in `make()` of `nb.ipynb` is necessary (closed 26 August 2024)
 - [x] Add the descriptions of `nb.ipynb` and `seeing.ipynb` once the results of `seeing.ipynb` are satisfactory (closed 23 August 2024 by #20)
