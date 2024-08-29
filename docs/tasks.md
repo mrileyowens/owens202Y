@@ -1,9 +1,9 @@
 ### Open
 
-- [ ] Add all Python packages and verisons to the software credit in the article
 
 ### Closed
 
+- [x] Add all Python packages and verisons to the software credit in the article (closed 29 August 2024)
 - [x] Clean up all files by removing obsolete code and adding more and any missing comments (partially closed 23 August 2024 by #21 and completely closed by #23 on 29 August 2024)
 - [x] Determine the units of the Lyα maps and verify the units stated in the documentation and code comments (closed 29 August 2024 by #23)
 - [x] Double check all file headers and code comments for accuracy and consistency (closed 29 August 2024)
