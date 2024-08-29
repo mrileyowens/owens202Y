@@ -1,15 +1,15 @@
 ### Open
 
 - [ ] Perform a final execution of the project validating its integrity
-- [ ] Investigate if the first `for` loop in `make()` of `nb.ipynb` is necessary
 - [ ] Clean up all files by removing obsolete code and adding more and any missing comments (partially closed 23 August 2024 by #21)
 - [ ] Double check all file headers and code comments for accuracy and consistency
 - [ ] Add all Python packages and verisons to the software credit in the article
 - [ ] Determine the units of the Lyα maps and verify the units stated in the documentation and code comments 
-- [ ] Update the article's methodology with new details about the MC simulation process
 
 ### Closed
 
+- [x] Update the article's methodology with new details about the MC simulation process (closed 28 August 2024)
+- [x] Investigate if the first `for` loop in `make()` of `nb.ipynb` is necessary (closed 26 August 2024)
 - [x] Add the descriptions of `nb.ipynb` and `seeing.ipynb` once the results of `seeing.ipynb` are satisfactory (closed 23 August 2024 by #20)
 - [x] Consider whether it is more appropriate to report fluxes (rather than flux densities) in the seeing simulation (closed 22 August 2024)
 - [x] Add description of `limit.ipynb` to `overview.md` (closed 22 August 2024 by #19)
