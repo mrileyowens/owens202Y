@@ -1,0 +1,32 @@
+
+cff-version: 1.2.0
+title: >-
+  Software release for 'Connecting Lyman-α and ionizing
+  photon escape in the Sunburst Arc'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: M. Riley
+    family-names: Owens
+    email: m.riley.owens@gmail.com
+    affiliation: University of Cincinnati
+    orcid: 'https://orcid.org/0000-0002-2862-307X'
+  - given-names: Jane R.
+    family-names: Rigby
+    affiliation: Goddard Space Flight Center
+    orcid: 'https://orcid.org/0000-0002-7627-6551'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.13619429
+    description: The all-version DOI resolving to the latest version
+repository-code: 'https://github.com/mrileyowens/owens202Y'
+keywords:
+  - astronomy
+  - astrophysics
+  - radiative transfer
+  - gravitational lensing
+  - reionization
+  - lyman alpha
+license: MIT
