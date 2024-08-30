@@ -6,6 +6,6 @@ For details about the files and structure of this repository, consult `docs/over
 
 This repository uses Python 3.12.2 with the packages specified in `docs/requirements.txt`.
 
-This repository is licensed under the MIT License. For the full license text, see `docs/license.txt`.
+This repository is licensed under the MIT License. For the full license text, see `LICENSE`.
 
 For questions or issues, please contact [M. Riley Owens](https://mrileyowens.github.io) at m.riley.owens@gmail.com.
