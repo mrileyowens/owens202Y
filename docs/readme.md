@@ -1,4 +1,6 @@
-# Software release for *Connecting Lyman-α and ionizing photon escape in the Sunburst Arc*
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13619430.svg)](https://doi.org/10.5281/zenodo.13619430)
+
+# Software release for *Connecting Lyman-α and ionizing photon escape in the Sunburst Arc* 
 
 This is a respository containing the underlying software used to create the results in the journal article *Connecting Lyman-α and ionizing photon escape in the Sunburst Arc*, led by [M. Riley Owens](https://mrileyowens.github.io) and submitted to *The Astrophysical Journal*.
 
