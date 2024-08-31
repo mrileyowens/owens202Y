@@ -1,5 +1,5 @@
 # The Lyα fluxes and ratios measured in the seeing effects simulation
-# Created by seeing.ipynb on 2024-08-26T22:59:20.591611Z
+# Created by seeing.ipynb on 2024-08-30T23:20:03.863830Z
 # 
 # The columns below are organized as follows. There are three types of measurements: unconvolved and convolved Lyα fluxes in a slit aperture (e/s),
 # and the ratio between the two fluxes. Each measurement type has a set of 4 columns, arranged consecutively in the order mentioned previously.

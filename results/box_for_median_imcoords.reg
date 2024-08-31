@@ -1,4 +1,4 @@
 # Region file format: DS9 astropy/regions
-global font="helvetica 10 normal roman" fixed=0 include=1 source=1 delete=1 edit=1 move=1 select=1 color=green highlite=1 width=1
+global font="helvetica 10 normal roman" highlite=1 fixed=0 select=1 delete=1 color=green source=1 width=1 edit=1 move=1 include=1
 icrs
 box(237.47789500,-78.18694097,0.00473865,0.00652503,330.05327364)

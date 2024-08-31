@@ -1,5 +1,5 @@
 # Measurements of the LyC escape fraction of each MagE slit aperture
-# Created by esc.ipynb on 2024-08-26T19:24:28.453948Z
+# Created by esc.ipynb on 2024-08-30T20:43:05.544693Z
 # 
 # Columns, from left to right: HST/WFC3 F275W flux and uncertainty (erg/s/cm^2), HST/ACS F814W flux and uncertainty (erg/s/cm^2), and LyC escape fraction and uncertainty (%)
 1.651756858170414877e-18 2.904993330350368482e-19 1.457936766977749006e-15 9.686582905260049720e-19 3.561134467408239690e+00 6.266009289577847419e-01
